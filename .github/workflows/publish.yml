@@ -4,6 +4,10 @@ on:
   push:
   # Allow manual triggering, e.g. to run end-to-end tests against Dependabot PRs:
   workflow_dispatch:
+  # Check for a new jose version once a day:
+  schedule:
+  # * is a special character in YAML so you have to quote this string
+  - cron:  '0 0 * * *'
 
 env:
   CI: true
