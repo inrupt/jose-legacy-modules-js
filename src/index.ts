@@ -30,10 +30,7 @@ export { UnsecuredJWT } from "jose/jwt/unsecured";
 export { jwtVerify, JWTVerifyOptions } from "jose/jwt/verify";
 
 export { encode as base64UrlEncode, decode as base64UrlDecode } from "jose/util/base64url";
-// This module is temporarily disabled, because it accidentally imports from
-// another package that is not listed as a dependency. See:
-// https://github.com/panva/jose/issues/206
-// export { decodeProtectedHeader, ProtectedHeaderParameters } from "jose/util/decode_protected_header";
+export { decodeProtectedHeader, ProtectedHeaderParameters } from "jose/util/decode_protected_header";
 export * from "jose/util/errors";
 export { generateKeyPair, GenerateKeyPairOptions } from "jose/util/generate_key_pair";
 export { generateSecret, GenerateSecretOptions } from "jose/util/generate_secret";
