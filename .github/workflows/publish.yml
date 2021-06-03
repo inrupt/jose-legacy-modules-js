@@ -57,6 +57,8 @@ jobs:
         path: |
           node_modules
           dist
+          package.json
+          package-lock.json
 
   verify-imports-node:
     needs: [check-new-version, build]
