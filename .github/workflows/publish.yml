@@ -22,7 +22,7 @@ jobs:
       run: |
         JOSE_VERSION=$(npm show jose version)
         FORKED_VERSION=$(npm show @inrupt/jose-legacy-modules version)
-        # Our forked version appends jose's version number to "0.0.1-",
+        # Our forked version appends jose's version number to "0.0.2-",
         # so we skip those first six characters:
         NEW_VERSION_EXISTS=false; [ $JOSE_VERSION != ${FORKED_VERSION:6} ] && NEW_VERSION_EXISTS=true
         echo "::set-output name=new-version-exists::$NEW_VERSION_EXISTS"
@@ -157,7 +157,7 @@ jobs:
     - name: Publish to npm
       run: |
         JOSE_VERSION=$(npm show jose version)
-        npm version --no-git-tag-version "0.0.1-$JOSE_VERSION"
+        npm version --no-git-tag-version "0.0.2-$JOSE_VERSION"
         npm publish --access public
         echo "Package published. To install, run:"
         echo ""
