@@ -160,6 +160,7 @@ jobs:
     - name: Publish to npm
       run: |
         JOSE_VERSION=$(npm show jose version)
+        curl https://raw.githubusercontent.com/panva/jose/main/CHANGELOG.md > CHANGELOG.md
         npm version --no-git-tag-version "0.0.3-$JOSE_VERSION"
         npm publish --access public
         echo "Package published. To install, run:"
