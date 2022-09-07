@@ -1,3 +1,5 @@
+**Deprecation notice**: As mentioned in https://github.com/panva/jose/discussions/201, `jose` is available in a format which makes this package obsolete.
+
 This package is automatically published whenever a new release of `jose` is pushed to npm.
 
 It only re-exports the `jose` API's from the top-level.
