@@ -76,7 +76,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         registry-url: 'https://registry.npmjs.org'
-    - uses: actions/download-artifact@v2.0.10
+    - uses: actions/download-artifact@v3.0.0
       with:
         name: build
     - name: Install the local package in the packaging test project
@@ -102,7 +102,7 @@ jobs:
       with:
         node-version: '14.x'
         registry-url: 'https://registry.npmjs.org'
-    - uses: actions/download-artifact@v2.0.10
+    - uses: actions/download-artifact@v3.0.0
       with:
         name: build
     - name: Verify that the package can be imported in a Parcel project
@@ -128,7 +128,7 @@ jobs:
       with:
         node-version: '14.x'
         registry-url: 'https://registry.npmjs.org'
-    - uses: actions/download-artifact@v2.0.10
+    - uses: actions/download-artifact@v3.0.0
       with:
         name: build
     - name: Verify that the package can be imported in a Webpack project
@@ -154,7 +154,7 @@ jobs:
       with:
         node-version: '14.x'
         registry-url: 'https://registry.npmjs.org'
-    - uses: actions/download-artifact@v2.0.10
+    - uses: actions/download-artifact@v3.0.0
       with:
         name: build
     - name: Publish to npm
